@@ -6,7 +6,7 @@
 #    By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/17 16:05:13 by rpena-ro          #+#    #+#              #
-#    Updated: 2025/11/21 12:05:36 by rpena-ro         ###   ########.fr        #
+#    Updated: 2025/11/21 12:54:25 by rpena-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ RECURSOS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 			ft_strchr.c ft_strrchr.c ft_strncmp.c \
 			ft_memchr.c ft_memcmp.c ft_strnstr.c\
 			ft_atoi.c ft_calloc.c ft_strdup.c\
+			ft_strjoin.c \
 		
 OBJ = $(RECURSOS:.c=.o)
 
@@ -27,16 +28,16 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	@ar -rcs $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@  
 
 clean: 
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 12:29:17 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/21 12:09:25 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/21 12:38:43 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int a);
@@ -39,5 +40,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_strjoin(const char *s1, const char *s2);
 
 #endif

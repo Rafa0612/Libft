@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:10:28 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/21 12:08:48 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/21 13:02:06 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (str[len])

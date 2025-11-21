@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 13:38:19 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/13 14:06:23 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:49:43 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	tam_src = 0;
 	i = 0;
-	if (!dst || !src)
-		return (0);
 	if (size > 0)
 	{
 		while (i < size - 1 && src[i])

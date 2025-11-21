@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 11:44:12 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/14 11:54:00 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:59:44 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ char	*ft_strrchr(const char *s, int c)
 		s++;
 	}
 	if ((char)*s == '\0' && (char)c == '\0')
-		return ((char)s);
+		return ((char *)s);
 	while (tam)
 	{
+		s--;
 		if ((char)*s == (char)c)
 		{
-			return ((char)s);
+			return ((char *)s);
 		}
 		tam--;
-		s--;
 	}
 	return (NULL);
 }

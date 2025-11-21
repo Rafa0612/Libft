@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:07:56 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/13 13:35:31 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:46:17 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	ptr_dest = (unsigned char *)dest;
 	ptr_src = (const unsigned char *)src;
 	i = n;
-	if (!ptr_dest || !ptr_src)
-	{
-		return (NULL);
-	}
-	else if (n == 0)
+	if (n == 0 || src == dest)
 		return (dest);
 	if (dest < src)
 	{
@@ -35,7 +31,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (i)
 		{
-			ptr_dest[--i] = ptr_src [i];
+			i--;
+			ptr_dest[i] = ptr_src [i];
 		}
 	}
 	return (dest);

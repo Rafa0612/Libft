@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 14:13:41 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/13 16:06:10 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:51:48 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	tam_dst = tam(dst);
-	tam_src = tam(src);
+	tam_src = tam((char *) src);
 	if (size == 0)
 		return (tam_src);
 	if (size <= tam_dst)

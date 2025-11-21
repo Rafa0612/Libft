@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:26:46 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/14 13:52:12 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/21 12:04:28 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + (*nptr - '0');
 		nptr++;
 	}
-	return (result);
+	return (result * signo);
 }

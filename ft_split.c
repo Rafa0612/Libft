@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 12:48:41 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/24 14:40:05 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/24 14:43:59 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ char	**ft_split(const char *s, char c)
 			ft_strlcpy(pptr[index_ptr], s + ini, len);
 			index_ptr++;
 		}
+		pptr[index_ptr] = NULL;
 	}
-		return (pptr);
+	return (pptr);
 }

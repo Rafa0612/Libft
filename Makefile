@@ -6,7 +6,7 @@
 #    By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/17 16:05:13 by rpena-ro          #+#    #+#              #
-#    Updated: 2025/11/24 12:51:23 by rpena-ro         ###   ########.fr        #
+#    Updated: 2025/11/24 16:59:06 by rpena-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ RECURSOS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 			ft_memchr.c ft_memcmp.c ft_strnstr.c\
 			ft_atoi.c ft_calloc.c ft_strdup.c\
 			ft_strjoin.c ft_substr.c ft_strtrim.c\
+			ft_split.c \
 		
 OBJ = $(RECURSOS:.c=.o)
 

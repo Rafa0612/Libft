@@ -6,12 +6,12 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 11:44:12 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/24 18:19:49 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/25 12:10:15 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -37,9 +37,9 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-int main(void)
+/*int main(void)
 {
 	char *ptr = "abc";
 	printf ("%s\n", ft_strrchr(ptr, ' '));
 	printf ("%s\n", strrchr(ptr, ' '));
-}
+}*/

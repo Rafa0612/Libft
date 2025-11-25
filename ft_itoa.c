@@ -6,7 +6,7 @@
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 12:11:54 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/25 13:14:04 by rpena-ro         ###   ########.fr       */
+/*   Updated: 2025/11/25 13:40:49 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,17 @@ void	caso_cero(char **res)
 	*res[1] = '\0';
 }
 
-void	cambiar_signo(int *n, int *signo)
+void	rellenar_string(char **res, size_t cont, int n)
+{
+	while (cont)
+	{
+		res[cont] = '0' + (n % 10);
+		cont--;
+		n /= 10;
+	}
+}
+
+void	caso_negativo(int *n, int *signo)
 {
 	*n = -(*n);
 	*signo = 0;
@@ -27,7 +37,6 @@ void	cambiar_signo(int *n, int *signo)
 
 char	*ft_itoa(int n)
 {
-	int		signo;
 	char	*res;
 	size_t	cont;
 	int		tmp;
@@ -40,26 +49,14 @@ char	*ft_itoa(int n)
 		cont++;
 	}
 	if (n == 0)
-	{
 		caso_cero(&res);
-		return (res);
-	}
-	signo = 1;
 	if (n < 0)
-	{
-		cambiar_signo(&n, &signo);
-		res = malloc(cont + 2);
-	}
+		caso_negativo();
 	if (n > 0)
 	{
 		res = malloc (cont + 1);
 		res[cont] = '\0';
 		cont--;
-		while (cont)
-		{
-			res[cont] = '0' + (n % 10);
-			cont--;
-			n /= 10;
-		}
 	}
+	return (res);
 }

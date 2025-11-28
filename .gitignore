@@ -1,0 +1,10 @@
+# Configuración de VS Code
+.vscode/
+
+# Archivos de compilación
+*.o
+*.out
+*.exe
+
+# Binarios
+a.out

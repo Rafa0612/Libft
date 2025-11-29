@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: rafa0612 <rafa0612@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/17 16:05:13 by rpena-ro          #+#    #+#              #
-#    Updated: 2025/11/27 19:22:23 by marvin           ###   ########.fr        #
+#    Updated: 2025/11/29 13:16:39 by rafa0612         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ RECURSOS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 			ft_atoi.c ft_calloc.c ft_strdup.c\
 			ft_strjoin.c ft_substr.c ft_strtrim.c\
 			ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c\
-			ft_putstr_fd.c ft_putendl_fd.c\
+			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 		
 OBJ = $(RECURSOS:.c=.o)
 

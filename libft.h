@@ -6,7 +6,7 @@
 /*   By: rafa0612 <rafa0612@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 12:29:17 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/29 13:16:27 by rafa0612         ###   ########.fr       */
+/*   Updated: 2025/11/29 16:00:50 by rafa0612         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <limits.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int a);

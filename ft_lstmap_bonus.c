@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/29 17:10:13 by rafa0612          #+#    #+#             */
-/*   Updated: 2025/12/01 18:48:21 by rpena-ro         ###   ########.fr       */
+/*   Created: 2025/12/01 18:34:59 by rpena-ro          #+#    #+#             */
+/*   Updated: 2025/12/01 18:46:15 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
+void (*del)(void *))
 {
-	new->next = *lst;
-	*lst = new;
+	t_list	*res;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	res = malloc(sizeof(t_list) * ft_lstsize(lst));
+	if (!res)
+		return (NULL);
 }

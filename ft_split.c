@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rafa0612 <rafa0612@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rpena-ro <rpena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 12:48:41 by rpena-ro          #+#    #+#             */
-/*   Updated: 2025/11/29 14:33:44 by rafa0612         ###   ########.fr       */
+/*   Updated: 2025/12/02 12:55:25 by rpena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,17 @@ size_t	contar_len(const char *s, char c)
 	return (len);
 }
 
+char	**liberar_memoria(char **pptr, size_t indexptr)
+{
+	while (indexptr > 0)
+	{
+		indexptr--;
+		free(pptr[indexptr]);
+	}
+	free (pptr);
+	return (NULL);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**pptr;
@@ -75,7 +86,7 @@ char	**ft_split(const char *s, char c)
 		{
 			len = contar_len(s + index_s, c) + 1;
 			if (!actu_pprt((char *)s + index_s, len, &index_ptr, pptr))
-				return (NULL);
+				return (liberar_memoria(pptr, index_ptr));
 			index_s += len - 1;
 		}
 	}
